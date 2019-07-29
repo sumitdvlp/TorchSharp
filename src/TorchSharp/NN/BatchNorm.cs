@@ -12,6 +12,7 @@ namespace TorchSharp.NN
         double momentum;
         bool affine;
         bool track_running_stats;
+        Parameter weight;
 
         public BatchNorm(int num_features, double eps = 1e-5, double momentum = 0.1, bool affine = true, bool track_running_stats = true) : base()
         {
@@ -23,7 +24,7 @@ namespace TorchSharp.NN
 
             if (this.affine)
             {
-
+                this.weight  = new Parameter()
             }
         }
 
